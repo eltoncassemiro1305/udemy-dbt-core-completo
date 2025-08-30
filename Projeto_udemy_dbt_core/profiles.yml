@@ -1,0 +1,11 @@
+Projeto_udemy_dbt_core:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: dbt-code      
+      dataset: "{{ env_var('DBT_DBNAME','dbt_ds') }}"
+      threads: 4
+      keyfile: C:/Users/elton/.dbt/dbt-code-1310d8ab69f8.json
+  
